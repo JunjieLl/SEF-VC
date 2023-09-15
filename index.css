@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.outer-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 1270px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.audio{
+    display: flex;
+    width: 150px;
+}
+
+.text{
+    display: flex;
+    width: 140px;
+    align-items: center;
+    font-size: 15px;
+}
+
+.row{
+    height: 50px;
+    margin: 5px 0px 5px 0px;
+}
+
+.title{
+    display: flex;
+    width: 140px;
+    height: 30px;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.caption{
+    display: flex;
+    width: 200px;
+    font-size: 5px;
+    line-height: 13px;
+}
+
+.spearate-line{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 50px;
+    border-color: gray;
+}
