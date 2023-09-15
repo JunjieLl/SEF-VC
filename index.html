@@ -9,8 +9,34 @@
     <div class="outer-outer-container">
         <h2 style="text-align: center;">SEF-VC: Speaker Embedding Free Zero-Shot Voice Conversion with Cross Attention
         </h2>
+        <div class="abstract-container">
+            <div class="abstract-inner-container">
+                <div class="abstract-title"><b>Abstract</b></div>
+                <p class="abstract">
+                    Zero-shot voice conversion (VC) aims to transfer the source speaker timbre to arbitrary
+                    unseen target
+                    speaker timbre, while keeping the linguistic content unchanged.
+                    Although the voice of generated speech can be controlled by providing the speaker embedding of the
+                    target
+                    speaker, the speaker similarity still lags behind the ground truth recordings.
+                    In this paper, we propose SEF-VC, a speaker embedding free voice conversion model,
+                    which is designed to learn and incorporate speaker timbre from reference speech via a powerful
+                    position-agnostic cross-attention mechanism, and then reconstruct waveform from HuBERT semantic
+                    tokens
+                    in a
+                    non-autoregressive manner.
+                    The concise design of SEF-VC enhances its training stability and voice conversion performance.
+                    Objective and subjective evaluations demonstrate the superiority of SEF-VC to generate high-quality
+                    speech
+                    with better similarity to target reference than strong zero-shot VC baselines, even for very short
+                    reference
+                    speeches.
+                </p>
+            </div>
+        </div>
         <!-- main experiment -->
         <div class="outer-container">
+            <div class="spearate-line"></div>
             <h3 style="text-align: center;">Performance Comparison Between SEF-VC and Other Baselines in Any-to-Any
                 Voice Conversion</h3>
             <div class="container">
@@ -49,7 +75,8 @@
         </div>
         <!-- prompt length -->
         <div class="outer-container">
-            <h3 style="text-align: center;">Experiment on The Influence of References of Different Lengths on Zero-Shot VC</h3>
+            <h3 style="text-align: center;">Experiment on The Influence of References of Different Lengths on Zero-Shot
+                VC</h3>
             <div class="container">
                 <div class="column">
                     <div class="title" style="justify-content: flex-start;">Prompt Length</div>

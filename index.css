@@ -57,3 +57,25 @@
     height: 50px;
     border-color: gray;
 }
+
+.abstract{
+    display: flex;
+}
+
+.abstract-title{
+    display: flex;
+    align-self: flex-start;
+    font-size: 20px;
+}
+
+.abstract-container{
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+}
+
+.abstract-inner-container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
