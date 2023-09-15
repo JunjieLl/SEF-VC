@@ -10,6 +10,83 @@ function generate_sample(datadir,src,ref){
     }
 }
 
+function generate_sample_prompt_length(datadir,src,ref,length){ 
+    return {
+        'src':`${datadir}/all_results_prompt_${length}/ref_${ref}/src_${src}/src_${src}.wav`,
+        'ref':`${datadir}/all_results_prompt_${length}/ref_${ref}/src_${src}/ref_${ref}.wav`,
+        'SEF_VC':`${datadir}/all_results_prompt_${length}/ref_${ref}/src_${src}/hubert_main_${src}.wav`,
+        'SSR_VC':`${datadir}/all_results_prompt_${length}/ref_${ref}/src_${src}/polyak_${src}.wav`,
+    }
+}
+
+
+function load_sample_prompt_length(){
+    let src_node = document.getElementById("prompt_src");
+    let ref_node = document.getElementById("prompt_ref");
+    let SEF_VC_node = document.getElementById("prompt_SEF_VC");
+    let SSR_VC_node = document.getElementById("prompt_SSR_VC");
+
+    let caption_node = document.getElementById('prompt_caption')
+
+    let src_to_ref_keys = ['2s','3s','5s','10s']
+    let prompt_length = ['2','3','5','10']
+    let src_to_ref = {
+        '2s':{
+            'src':'8455_210777_000079_000002',
+            'ref':'8555_284449_000047_000001',
+            'transcript':'All this I could hardly explain to him, as I should thus be giving to him the strongest evidence against my own philosophy.'
+        },
+        '3s':{
+            'src':'8455_210777_000079_000002',
+            'ref':'8555_284449_000044_000000',
+            'transcript':'All this I could hardly explain to him, as I should thus be giving to him the strongest evidence against my own philosophy.'
+        },
+        '5s':{
+            'src':'8455_210777_000079_000002',
+            'ref':'8555_284449_000045_000000',
+            'transcript':'All this I could hardly explain to him, as I should thus be giving to him the strongest evidence against my own philosophy.'
+        },
+        '10s':{
+            'src':'8455_210777_000079_000002',
+            'ref':'8555_284449_000048_000000',
+            'transcript':'All this I could hardly explain to him, as I should thus be giving to him the strongest evidence against my own philosophy.'
+        },
+    }
+
+    for(let i=0;i<src_to_ref_keys.length;++i){
+        key = src_to_ref_keys[i];
+        let sample = generate_sample_prompt_length('prompt_length_results',src_to_ref[key]['src'],src_to_ref[key]['ref'],prompt_length[i]);
+        let caption = document.createElement('div')
+        caption.textContent = src_to_ref[key]['transcript']
+        caption.className = 'row caption'
+        caption_node.appendChild(caption)
+
+        let tmp = document.createElement('audio');
+        tmp.controls = true;
+        tmp.src = sample['src'];
+        tmp.className = 'audio row';
+        src_node.appendChild(tmp)
+
+        tmp = document.createElement('audio');
+        tmp.controls =true;
+        tmp.src = sample['ref'];
+        tmp.className = 'audio row';
+        ref_node.appendChild(tmp);
+
+        tmp = document.createElement('audio');
+        tmp.controls =true;
+        tmp.src = sample['SEF_VC'];
+        tmp.className = 'audio row';
+        SEF_VC_node.appendChild(tmp);
+
+        tmp = document.createElement('audio');
+        tmp.controls =true;
+        tmp.src = sample['SSR_VC'];
+        tmp.className = 'audio row';
+        SSR_VC_node.appendChild(tmp);
+    }
+}
+
 function load_sample_main_exp(){
     let src_node = document.getElementById("src");
     let ref_node = document.getElementById("ref");
@@ -159,4 +236,5 @@ function load_sample_abal_spk(){
 window.onload = function(){
     load_sample_main_exp();
     load_sample_abal_spk();
+    load_sample_prompt_length();
 };

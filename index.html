@@ -6,69 +6,106 @@
 </head>
 
 <body>
-    <!-- main experiment -->
-    <div class="outer-container">
-        <h3 style="text-align: center;">Performance Comparison Between SEF-VC and Other Baselines in Any-to-Any Voice Conversion</h3>
-        <div class="container">
-            <div class="column">
-                <div class="title" style="justify-content: flex-start;">Conversion Type</div>
-                <div class="text row">Male to Female</div>
-                <div class="text row">Male to Male</div>
-                <div class="text row">Female to Male</div>
-                <div class="text row">Female to Female</div>
+    <div class="outer-outer-container">
+        <h2 style="text-align: center;">SEF-VC: Speaker Embedding Free Zero-Shot Voice Conversion with Cross Attention
+        </h2>
+        <!-- main experiment -->
+        <div class="outer-container">
+            <h3 style="text-align: center;">Performance Comparison Between SEF-VC and Other Baselines in Any-to-Any
+                Voice Conversion</h3>
+            <div class="container">
+                <div class="column">
+                    <div class="title" style="justify-content: flex-start;">Conversion Type</div>
+                    <div class="text row">Male to Female</div>
+                    <div class="text row">Male to Male</div>
+                    <div class="text row">Female to Male</div>
+                    <div class="text row">Female to Female</div>
+                </div>
+                <div class="column" id="caption">
+                    <div class="title">Transcript</div>
+                </div>
+                <div class="column" id="src">
+                    <div class="title">Source Speech</div>
+                </div>
+                <div class="column" id="ref">
+                    <div class="title">Reference Speech</div>
+                </div>
+                <div class="column" id="SEF_VC">
+                    <div class="title">SEF-VC</div>
+                </div>
+                <div class="column" id="SSR_VC">
+                    <div class="title"><a href="https://github.com/facebookresearch/speech-resynthesis"
+                            target="_blank">SSR-VC</a></div>
+                </div>
+                <div class="column" id="YourTTS">
+                    <div class="title"><a href="https://github.com/Edresson/YourTTS" target="_blank">YourTTS</a></div>
+                </div>
+                <div class="column" id="AdaIN_VC">
+                    <div class="title"><a href="https://github.com/jjery2243542/adaptive_voice_conversion"
+                            target="_blank">AdaIN-VC</a></div>
+                </div>
             </div>
-            <div class="column" id="caption">
-                <div class="title">Transcript</div>
-            </div>
-            <div class="column" id="src">
-                <div class="title">Source Speech</div>
-            </div>
-            <div class="column" id="ref">
-                <div class="title">Reference Speech</div>
-            </div>
-            <div class="column" id="SEF_VC">
-                <div class="title">SEF-VC</div>
-            </div>
-            <div class="column" id="SSR_VC">
-                <div class="title"><a href="https://github.com/facebookresearch/speech-resynthesis" target="_blank">SSR-VC</a></div>
-            </div>
-            <div class="column" id="YourTTS">
-                <div class="title"><a href="https://github.com/Edresson/YourTTS" target="_blank">YourTTS</a></div>
-            </div>
-            <div class="column" id="AdaIN_VC">
-                <div class="title"><a href="https://github.com/jjery2243542/adaptive_voice_conversion" target="_blank">AdaIN-VC</a></div>
-            </div>
+            <div class="spearate-line"></div>
         </div>
-        <div class="spearate-line"></div>
-    </div>
-<!-- spk vc cross -->
-    <div class="outer-container">
-        <h3 style="text-align: center;">Experiment on The Effectiveness of Different Speaker Modeling</h3>
-        <div class="container">
-            <div class="column">
-                <div class="title" style="justify-content: flex-start;">Conversion Type</div>
-                <div class="text row">Male to Female</div>
-                <div class="text row">Male to Male</div>
-                <div class="text row">Female to Male</div>
-                <div class="text row">Female to Female</div>
+        <!-- prompt length -->
+        <div class="outer-container">
+            <h3 style="text-align: center;">Experiment on The Influence of References of Different Lengths on Zero-Shot VC</h3>
+            <div class="container">
+                <div class="column">
+                    <div class="title" style="justify-content: flex-start;">Prompt Length</div>
+                    <div class="text row"> 2 Seconds</div>
+                    <div class="text row"> 3 Seconds</div>
+                    <div class="text row"> 5 Seconds</div>
+                    <div class="text row">10 Seconds</div>
+                </div>
+                <div class="column" id="prompt_caption">
+                    <div class="title">Transcript</div>
+                </div>
+                <div class="column" id="prompt_src">
+                    <div class="title">Source Speech</div>
+                </div>
+                <div class="column" id="prompt_ref">
+                    <div class="title">Reference Speech</div>
+                </div>
+                <div class="column" id="prompt_SEF_VC">
+                    <div class="title">SEF-VC</div>
+                </div>
+                <div class="column" id="prompt_SSR_VC">
+                    <div class="title"><a href="https://github.com/facebookresearch/speech-resynthesis"
+                            target="_blank">SSR-VC</a></div>
+                </div>
             </div>
-            <div class="column" id="spk_caption">
-                <div class="title">Transcript</div>
-            </div>
-            <div class="column" id="spk_src">
-                <div class="title">Source Speech</div>
-            </div>
-            <div class="column" id="spk_ref">
-                <div class="title">Reference Speech</div>
-            </div>
-            <div class="column" id="spk_cross_attention">
-                <div class="title">Cross Attention</div>
-            </div>
-            <div class="column" id="spk_speaker_embedding">
-                <div class="title">Speaker Embedding</div>
-            </div>
+            <div class="spearate-line"></div>
         </div>
-        <div class="spearate-line"></div>
+        <!-- spk vc cross -->
+        <div class="outer-container">
+            <h3 style="text-align: center;">Experiment on The Effectiveness of Different Speaker Modeling</h3>
+            <div class="container">
+                <div class="column">
+                    <div class="title" style="justify-content: flex-start;">Conversion Type</div>
+                    <div class="text row">Male to Female</div>
+                    <div class="text row">Male to Male</div>
+                    <div class="text row">Female to Male</div>
+                    <div class="text row">Female to Female</div>
+                </div>
+                <div class="column" id="spk_caption">
+                    <div class="title">Transcript</div>
+                </div>
+                <div class="column" id="spk_src">
+                    <div class="title">Source Speech</div>
+                </div>
+                <div class="column" id="spk_ref">
+                    <div class="title">Reference Speech</div>
+                </div>
+                <div class="column" id="spk_cross_attention">
+                    <div class="title">Cross Attention</div>
+                </div>
+                <div class="column" id="spk_speaker_embedding">
+                    <div class="title">Speaker Embedding</div>
+                </div>
+            </div>
+            <div class="spearate-line"></div>
+        </div>
     </div>
 </body>
 
