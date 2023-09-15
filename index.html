@@ -7,19 +7,22 @@
 
 <body>
     <div class="outer-outer-container">
-        <h2 style="text-align: center;">SEF-VC: Speaker Embedding Free Zero-Shot Voice Conversion with Cross Attention
-        </h2>
+        <div class="artical-title"><b>SEF-VC: Speaker Embedding Free Zero-Shot Voice Conversion with Cross Attention</b>
+        </div>
         <div class="author-container">
-            <div>Junjie Li, Yiwei Guo, Xie Chen, Kai Yu</div>
-            <div>MoE Key Lab of Artificial Intelligence, AI Institute</div>
-            <div>X-LANCE Lab, Department of Computer Science and Engineering</div>
-            <div>Shanghai Jiao Tong University, Shanghai, China</div>
-            <div style="font-size: 13px;">{junjieli, yiwei.guo, chenxie95, kai.yu}@sjtu.edu.cn</div>
+            <div class="author"><b>Junjie Li</b>, <b>Yiwei Guo</b>, <b>Xie Chen</b>, <b>Kai Yu</b></div>
+            <div class="author">MoE Key Lab of Artificial Intelligence, AI Institute</div>
+            <div class="author">X-LANCE Lab, Department of Computer Science and Engineering</div>
+            <div class="author">Shanghai Jiao Tong University, Shanghai, China</div>
+            <div style="font-size: 14px;">{<a href="mailto:junjieli@sjtu.edu.cn">junjieli</a>, <a
+                    href="mailto:yiwei.guo@sjtu.edu.cn">yiwei.guo</a>, <a
+                    href="mailto:chenxie95@sjtu.edu.cn">chenxie95</a>, <a
+                    href="mailto:kai.yu@sjtu.edu.cn">kai.yu</a>}@sjtu.edu.cn</div>
         </div>
         <div class="abstract-container">
             <div class="abstract-inner-container">
                 <div class="abstract-title"><b>Abstract</b></div>
-                <p class="abstract">
+                <div class="abstract">
                     Zero-shot voice conversion (VC) aims to transfer the source speaker timbre to arbitrary
                     unseen target
                     speaker timbre, while keeping the linguistic content unchanged.
@@ -38,17 +41,17 @@
                     with better similarity to target reference than strong zero-shot VC baselines, even for very short
                     reference
                     speeches.
-                </p>
+                </div>
             </div>
         </div>
         <!-- main experiment -->
         <div class="outer-container">
             <div class="spearate-line"></div>
-            <h3 style="text-align: center;">Performance Comparison Between SEF-VC and Other Baselines in Any-to-Any
-                Voice Conversion</h3>
+            <div class="exp-title"><b>Performance Comparison Between SEF-VC and Other Baselines in Any-to-Any
+                    Voice Conversion</b></div>
             <div class="container">
                 <div class="column">
-                    <div class="title" style="justify-content: flex-start;">Conversion Type</div>
+                    <div class="title" style="justify-content: flex-start; ">Conversion Type</div>
                     <div class="text row">Male to Female</div>
                     <div class="text row">Male to Male</div>
                     <div class="text row">Female to Male</div>
@@ -75,15 +78,15 @@
                             target="_blank">SSR-VC</a></div>
                 </div>
                 <div class="column" id="SEF_VC">
-                    <div class="title">SEF-VC</div>
+                    <div class="title"><b>SEF-VC (Ours)</b></div>
                 </div>
             </div>
             <div class="spearate-line"></div>
         </div>
         <!-- prompt length -->
         <div class="outer-container">
-            <h3 style="text-align: center;">Experiment on The Influence of References of Different Lengths on Zero-Shot
-                VC</h3>
+            <div class="exp-title"><b>Experiment on The Influence of References of Different Lengths on Zero-Shot
+                    VC</b></div>
             <div class="container">
                 <div class="column">
                     <div class="title" style="justify-content: flex-start;">Prompt Length</div>
@@ -106,14 +109,14 @@
                             target="_blank">SSR-VC</a></div>
                 </div>
                 <div class="column" id="prompt_SEF_VC">
-                    <div class="title">SEF-VC</div>
+                    <div class="title"><b>SEF-VC (Ours)</b></div>
                 </div>
             </div>
             <div class="spearate-line"></div>
         </div>
         <!-- spk vc cross -->
         <div class="outer-container">
-            <h3 style="text-align: center;">Experiment on The Effectiveness of Different Speaker Modeling</h3>
+            <div class="exp-title"><b>Experiment on The Effectiveness of Different Speaker Modeling</b></div>
             <div class="container">
                 <div class="column">
                     <div class="title" style="justify-content: flex-start;">Conversion Type</div>
@@ -135,7 +138,7 @@
                     <div class="title">Speaker Embedding</div>
                 </div>
                 <div class="column" id="spk_cross_attention">
-                    <div class="title">Cross Attention</div>
+                    <div class="title"><b>SEF-VC (Ours)</b></div>
                 </div>
             </div>
             <div class="spearate-line"></div>
