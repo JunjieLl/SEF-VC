@@ -48,8 +48,8 @@
 .caption {
     display: flex;
     width: 200px;
-    font-size: 5px;
-    line-height: 13px;
+    font-size: 12px;
+    line-height: 12px;
 }
 
 .spearate-line {
